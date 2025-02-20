@@ -4,18 +4,30 @@ Welcome to the 365 Days, 365 Projects repository! This project aims to create a 
 
 ## Table of Contents
 
-- [January](#january)
-- [February](#february)
-- [March](#march)
-- [April](#april)
-- [May](#may)
-- [June](#june)
-- [July](#july)
-- [August](#august)
-- [September](#september)
-- [October](#october)
-- [November](#november)
-- [December](#december)
+<table>
+  <tr>
+    <td>
+      <ul>
+        <li><a href="#january">January</a></li>
+        <li><a href="#february">February</a></li>
+        <li><a href="#march">March</a></li>
+        <li><a href="#april">April</a></li>
+        <li><a href="#may">May</a></li>
+        <li><a href="#june">June</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#july">July</a></li>
+        <li><a href="#august">August</a></li>
+        <li><a href="#september">September</a></li>
+        <li><a href="#october">October</a></li>
+        <li><a href="#november">November</a></li>
+        <li><a href="#december">December</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## January [![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 
