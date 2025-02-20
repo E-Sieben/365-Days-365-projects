@@ -1,0 +1,62 @@
+[
+    {
+        "first name": "john",
+        " last name": " doe",
+        " age": " 30",
+        " adress": " 123 main st"
+    },
+    {
+        "first name": "jane",
+        " last name": " smith",
+        " age": " 25",
+        " adress": " 456 oak ave"
+    },
+    {
+        "first name": "emily",
+        " last name": " johnson",
+        " age": " 28",
+        " adress": " 789 pine ln"
+    },
+    {
+        "first name": "michael",
+        " last name": " brown",
+        " age": " 35",
+        " adress": " 101 elm st"
+    },
+    {
+        "first name": "sarah",
+        " last name": " davis",
+        " age": " 22",
+        " adress": " 222 maple dr"
+    },
+    {
+        "first name": "david",
+        " last name": " wilson",
+        " age": " 40",
+        " adress": " 333 birch rd"
+    },
+    {
+        "first name": "jennifer",
+        " last name": " rodriguez",
+        " age": " 31",
+        " adress": " 444 cedar ct"
+    },
+    {
+        "first name": "christopher",
+        " last name": " garcia",
+        " age": " 27",
+        " adress": " 555 walnut st"
+    },
+    {
+        "first name": "amanda",
+        " last name": " martinez",
+        " age": " 29",
+        " adress": " 666 cherry ave"
+    },
+    {
+        "first name": "matthew",
+        " last name": " anderson",
+        " age": " 33",
+        " adress": " 777 oak st"
+    }
+]
