@@ -1,0 +1,50 @@
+The quick brown fox jumps over the lazy dog.
+This is a test file for string searching.
+It contains multiple lines of text.
+Some lines are short, others are long.
+We are looking for specific patterns.
+Let's see if we can find them all.
+This file should be sufficient for testing.
+String searching is a useful skill.
+It can help you find information quickly.
+Regular expressions are very powerful.
+They can match complex patterns.
+This is line number eleven.
+We are getting closer to the end.
+Keep searching, you'll find it.
+The needle in the haystack.
+Another line of text here.
+Just adding more content.
+To make the file longer.
+And more interesting.
+Hopefully, this is enough.
+Almost there, keep going.
+This is line twenty-two.
+We need more lines still.
+So let's keep writing.
+Adding random sentences.
+That don't really matter.
+But increase the line count.
+This is getting tedious.
+But we must persevere.
+Almost halfway there now.
+Just a little bit further.
+This is line thirty-one.
+Still adding more lines.
+To reach our goal of fifty.
+It's a long way to go.
+But we're making progress.
+Keep on typing away.
+This is line thirty-seven.
+Almost there, I promise.
+Just a few more lines.
+And we'll be finished.
+This is line forty-one.
+Getting very close now.
+Just a little bit more.
+Almost at the finish line.
+This is line forty-five.
+So close, you can taste it.
+Just five more lines to go.
+And we're finally done.
+This is the last line.
