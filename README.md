@@ -40,4 +40,16 @@ Building the basis, staying within the CLI and avoiding external libraries.
 | Data & Input/Output           | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
 | Fun and Simple                | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
 
-! Note: Tasks are generaly AI generated, while Programming is done with Auto-Complete of
+## February [![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)](https://img.shields.io/badge/Difficulty-Medium-yellow) ![Status: In Progress](https://img.shields.io/badge/Status-In%20Progress-orange)
+
+Focusing on Web Scraping, Data Analysis, and Data Visualization.
+
+| Project            | Status                                                                    |
+| ------------------ | ------------------------------------------------------------------------- |
+| Web Scraping       | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Data Analysis      | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Data Visualization | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+
+# Rules:
+- Tasks are generally AI generated, but not necessarily 
+- Programming is done with AI Auto-Complete off

@@ -7,3 +7,20 @@
 ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 
 ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+
+# Months Readme
+
+# [Month]
+
+Description
+
+## Table of Contents
+
+- [Category](#Category)
+
+## Category:
+
+n. **[Project Name](./Category/Day/)**: Project description.
+
+- ![Difficulty: Difficulty](https://img.shields.io/badge/Difficulty-Difficulty)
+- ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
