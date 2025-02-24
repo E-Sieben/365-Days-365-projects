@@ -1,0 +1,15 @@
+2024-01-27 10:00:00 INFO: Server started
+2024-01-27 10:00:01 DEBUG: Loading configuration
+2024-01-27 10:00:02 INFO: Configuration loaded successfully
+2024-01-27 10:00:05 WARNING: Low disk space
+2024-01-27 10:00:10 ERROR: Failed to connect to database
+2024-01-27 10:00:15 INFO: User logged in: JohnDoe
+2024-01-27 10:00:20 DEBUG: Processing request from 192.168.1.1
+2024-01-27 10:00:25 WARNING: High CPU usage
+2024-01-27 10:00:30 ERROR: Invalid input received
+2024-01-27 10:00:35 INFO: Data backup started
+2024-01-27 10:00:40 DEBUG: Backup progress: 50%
+2024-01-27 10:00:45 INFO: Data backup completed successfully
+2024-01-27 10:00:50 WARNING: Network latency detected
+2024-01-27 10:00:55 ERROR: Application crashed
+2024-01-27 10:01:00 INFO: Server stopped
