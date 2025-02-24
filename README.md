@@ -29,13 +29,15 @@ Welcome to the 365 Days, 365 Projects repository! This project aims to create a 
   </tr>
 </table>
 
-## January [![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+## January [![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 
 Building the basis, staying within the CLI and avoiding external libraries.
 
-| Project                       | Status                                                                    |
-| ----------------------------- | ------------------------------------------------------------------------- |
-| Text Manipulation & Utilities | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)    |
-| File System & System Info     | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)    |
-| Data & Input/Output           | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
-| Fun and Simple                | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Project                       | Status                                                                 |
+| ----------------------------- | ---------------------------------------------------------------------- |
+| Text Manipulation & Utilities | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
+| File System & System Info     | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
+| Data & Input/Output           | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
+| Fun and Simple                | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
+
+! Note: Tasks are generaly AI generated, while Programming is done with Auto-Complete of
