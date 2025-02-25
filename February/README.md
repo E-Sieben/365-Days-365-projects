@@ -12,7 +12,7 @@ This month, we will focus on three interconnected themes: Web Scraping, Data Ana
 
 1. **[Simple Web Scraper](./0_Web-Scraping/Day01_SimpleWebScraper/)**: Extracts text data from a single web page.
    - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 2. **[Image Scraper](./0_Web-Scraping/Day02_ImageScraper/)**: Downloads images from a web page.
    - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
