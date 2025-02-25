@@ -17,7 +17,7 @@ def scrape_for_jobs(url: str = STD_URL) -> list[tuple[str, str, str]]:
 
 def pretty_print_jobs(toPrint: list[tuple[str, str, str]], i: int = 10) -> None:
     if i == 0:
-        i = len(toPrint)
+        i: int = len(toPrint)
     for j in range(i):
         print(f"{toPrint[j][0]}:")
         print(f"   Company: {toPrint[j][1]}")
