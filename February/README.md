@@ -15,10 +15,10 @@ This month, we will focus on three interconnected themes: Web Scraping, Data Ana
    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 2. **[Image Scraper](./0_Web-Scraping/Day02_ImageScraper/)**: Downloads images from a web page.
    - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 3. **[Multi-Page Scraper](./0_Web-Scraping/Day03_MultiPageScraper/)**: Scrapes data from multiple pages of a website.
    - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 4. **[API Data Fetcher](./0_Web-Scraping/Day04_APIDataFetcher/)**: Fetches data from a public API.
    - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
