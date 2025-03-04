@@ -4,42 +4,42 @@ This month, we will focus on three interconnected themes: Web Scraping, Data Ana
 
 ## Table of Contents
 
-- [Web Scraping](#web-scraping)
-- [Data Analysis](#data-analysis)
-- [Data Visualization](#data-visualization)
+-  [Web Scraping](#web-scraping)
+-  [Data Analysis](#data-analysis)
+-  [Data Visualization](#data-visualization)
 
 ## Web Scraping:
 
 1. **[Simple Web Scraper](./0_Web-Scraping/Day01_SimpleWebScraper/)**: Extracts text data from a single web page.
-   - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   -  ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 2. **[Image Scraper](./0_Web-Scraping/Day02_ImageScraper/)**: Downloads images from a web page.
-   - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   -  ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 3. **[Multi-Page Scraper](./0_Web-Scraping/Day03_MultiPageScraper/)**: Scrapes data from multiple pages of a website.
-   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 4. **[API Data Fetcher](./0_Web-Scraping/Day04_APIDataFetcher/)**: Fetches data from a public API.
-   - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 5. **[Web Scraper with Authentication](./0_Web-Scraping/Day05_AuthenticatedScraper/)**: Scrapes data from a website that requires login.
-   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 6. **[Scraper with Proxy](./0_Web-Scraping/Day06_ProxyScraper/)**: Uses a proxy to scrape data from a website.
-   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 7. **[Scraper with Error Handling](./0_Web-Scraping/Day07_ErrorHandlingScraper/)**: Implements error handling in a web scraper.
-   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 8. **[Scraper for Dynamic Content](./0_Web-Scraping/Day08_DynamicContentScraper/)**: Scrapes data from a website with dynamic content (e.g., JavaScript-rendered).
-   - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
+   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 9. **[Scraper with Scheduling](./0_Web-Scraping/Day09_ScheduledScraper/)**: Schedules a web scraper to run at regular intervals.
-   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
-10. **[Scraper for Specific Data](./0_Web-Scraping/Day10_SpecificDataScraper/)**: Scrapes specific data (e.g., product prices) from a website.
-    - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+10.   **[Scraper for Specific Data](./0_Web-Scraping/Day10_SpecificDataScraper/)**: Scrapes specific data (e.g., product prices) from a website.
+      -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+      -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 
 ## Data Analysis:
 
