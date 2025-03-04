@@ -21,16 +21,16 @@ This month, we will focus on three interconnected themes: Web Scraping, Data Ana
    -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 4. **[API Data Fetcher](./0_Web-Scraping/Day04_APIDataFetcher/)**: Fetches data from a public API.
    -  ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 5. **[Web Scraper with Authentication](./0_Web-Scraping/Day05_AuthenticatedScraper/)**: Scrapes data from a website that requires login.
    -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
    -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 6. **[Scraper with Proxy](./0_Web-Scraping/Day06_ProxyScraper/)**: Uses a proxy to scrape data from a website.
    -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 7. **[Scraper with Error Handling](./0_Web-Scraping/Day07_ErrorHandlingScraper/)**: Implements error handling in a web scraper.
    -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 8. **[Scraper for Dynamic Content](./0_Web-Scraping/Day08_DynamicContentScraper/)**: Scrapes data from a website with dynamic content (e.g., JavaScript-rendered).
    -  ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
    -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
