@@ -38,8 +38,8 @@ This month, we will focus on three interconnected themes: Web Scraping, Data Ana
    -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
    -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 10.   **[Scraper for Specific Data](./0_Web-Scraping/Day10_SpecificDataScraper/)**: Scrapes specific data (e.g., product prices) from a website.
-      -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-      -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+        -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+        -  ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
 
 ## Data Analysis:
 
