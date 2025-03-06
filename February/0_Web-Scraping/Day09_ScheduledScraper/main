@@ -1,0 +1,3 @@
+# https://stackoverflow.com/questions/8727935/execute-python-script-via-crontab
+# mit crontab nutzen
+*/10 * * * * / usr/bin/python February/0_Web-Scraping/Day08_DynamicContentScraper/main.py

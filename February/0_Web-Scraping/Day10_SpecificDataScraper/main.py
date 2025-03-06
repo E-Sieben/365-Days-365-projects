@@ -1,1 +1,1 @@
-print("Hello World")
+# Refer to Day 01
