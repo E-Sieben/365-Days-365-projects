@@ -1,68 +1,120 @@
+# Standard library imports
 import os
 import re
-import csv
 import time
 import random
+from datetime import datetime
+from typing import Dict, List, Optional, Any
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import urljoin
+
+# Third-party imports
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from datetime import datetime
-from urllib.parse import urljoin
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-def create_directory(directory_path):
-    """Ensure directory exists."""
+def create_directory(directory_path: str) -> None:
+    """
+    Ensure directory exists, creating it if necessary.
+
+    Args:
+        directory_path: Path of directory to create
+    """
     if not os.path.exists(directory_path):
         os.makedirs(directory_path)
         print(f"Created directory: {directory_path}")
 
 
-def categorize_product(combined_text):
-    """Return product category based on combined text."""
-    categories = {
-        'jeans': ['jeans', 'denim', 'baggy', 'skinny jeans', 'straight jeans', 'wide leg'],
-        'shirts': ['shirt', 'bluse', 'blouse', 'top', 'hemd', 't-shirt', 'tshirt', 't shirt', 'tee', 'body'],
-        'sweaters': ['pullover', 'sweater', 'sweatshirt', 'hoodie', 'cardigan', 'strickjacke'],
-        'dresses': ['kleid', 'dress', 'robe'],
-        'skirts': ['rock', 'skirt'],
-        'pants': ['hose', 'pants', 'trousers', 'leggings', 'joggers'],
-        'jackets': ['jacke', 'jacket', 'blazer', 'coat', 'mantel', 'blouson'],
-        'underwear': ['unterwäsche', 'underwear', 'bra', 'slip', 'panty'],
-        'accessories': ['schal', 'scarf', 'mütze', 'cap', 'hat', 'schmuck', 'jewelry', 'tasche', 'bag']
-    }
+# Pre-compile category keywords for faster lookup
+CATEGORY_KEYWORDS = {
+    'jeans': ['jeans', 'denim', 'baggy', 'skinny jeans', 'straight jeans', 'wide leg'],
+    'shirts': ['shirt', 'bluse', 'blouse', 'top', 'hemd', 't-shirt', 'tshirt', 't shirt', 'tee', 'body'],
+    'sweaters': ['pullover', 'sweater', 'sweatshirt', 'hoodie', 'cardigan', 'strickjacke'],
+    'dresses': ['kleid', 'dress', 'robe'],
+    'skirts': ['rock', 'skirt'],
+    'pants': ['hose', 'pants', 'trousers', 'leggings', 'joggers'],
+    'jackets': ['jacke', 'jacket', 'blazer', 'coat', 'mantel', 'blouson'],
+    'underwear': ['unterwäsche', 'underwear', 'bra', 'slip', 'panty'],
+    'accessories': ['schal', 'scarf', 'mütze', 'cap', 'hat', 'schmuck', 'jewelry', 'tasche', 'bag']
+}
 
-    for category, keywords in categories.items():
-        if any(keyword in combined_text for keyword in keywords):
+# Create a flat keyword to category mapping for O(1) lookups
+KEYWORD_TO_CATEGORY = {}
+for category, keywords in CATEGORY_KEYWORDS.items():
+    for keyword in keywords:
+        KEYWORD_TO_CATEGORY[keyword] = category
+
+
+def categorize_product(combined_text: str) -> str:
+    """
+    Return product category based on text analysis.
+
+    Args:
+        combined_text: Combined product text to analyze
+
+    Returns:
+        String representing the product category
+    """
+    # Ensure text is lowercase for case-insensitive matching
+    text = combined_text.lower()
+
+    # First try direct keyword matching (fastest)
+    for keyword, category in KEYWORD_TO_CATEGORY.items():
+        if keyword in text:
             return category
+
+    # Fallback to category-by-category search
+    for category, keywords in CATEGORY_KEYWORDS.items():
+        if any(keyword in text for keyword in keywords):
+            return category
+
     return 'other'
 
 
-def get_product_type(combined_text):
-    """Extract specific product type from product info."""
-    product_types = [
-        'jeans', 't-shirt', 'tshirt', 'hoodie', 'sweater', 'dress', 'skirt',
-        'leggings', 'blazer', 'blouse', 'top', 'cardigan', 'jacket', 'coat',
-        'joggers', 'shorts', 'underwear', 'scarf', 'hat', 'bag'
-    ]
+# Pre-compile product type keywords for faster matching
+PRODUCT_TYPES = [
+    'jeans', 't-shirt', 'tshirt', 'hoodie', 'sweater', 'dress', 'skirt',
+    'leggings', 'blazer', 'blouse', 'top', 'cardigan', 'jacket', 'coat',
+    'joggers', 'shorts', 'underwear', 'scarf', 'hat', 'bag'
+]
 
-    for product_type in product_types:
-        if product_type in combined_text:
+
+def get_product_type(combined_text: str) -> str:
+    """
+    Extract specific product type from product info.
+
+    Args:
+        combined_text: Combined product text to analyze
+
+    Returns:
+        String representing the product type
+    """
+    text = combined_text.lower()
+
+    for product_type in PRODUCT_TYPES:
+        if product_type in text:
             return product_type
 
     # If no specific type found, use the category
     for category in ['jeans', 'shirt', 'sweater', 'dress', 'skirt', 'pant', 'jacket', 'underwear', 'accessory']:
-        if category in combined_text or f"{category}s" in combined_text:
+        if category in text or f"{category}s" in text:
             return category
 
     return 'other'
 
 
 # Create a session with retry mechanism
-def get_session():
+def get_session() -> requests.Session:
+    """
+    Create a requests session with retry mechanism.
+
+    Returns:
+        Configured requests session
+    """
     session = requests.Session()
     retry = Retry(
         total=3,
@@ -79,8 +131,17 @@ def get_session():
     return session
 
 
-def extract_product_data(product, url):
-    """Extract data from a product container element."""
+def extract_product_data(product: BeautifulSoup, url: str) -> Optional[Dict[str, Any]]:
+    """
+    Extract data from a product container element.
+
+    Args:
+        product: BeautifulSoup object representing the product container
+        url: URL of the product page
+
+    Returns:
+        Dictionary containing extracted product data, or None if extraction fails
+    """
     try:
         # Try different selectors for title
         title_elem = product.select_one('.sc-KXCwU.dAUKCu.sc-PgYfk.kLcJAn') or \
@@ -156,8 +217,17 @@ def extract_product_data(product, url):
         return None
 
 
-def scrape_page(url, session):
-    """Scrape product data from a single page using the provided session."""
+def scrape_page(url: str, session: requests.Session) -> List[Dict[str, Any]]:
+    """
+    Scrape product data from a single page using the provided session.
+
+    Args:
+        url: URL of the page to scrape
+        session: Requests session to use for scraping
+
+    Returns:
+        List of dictionaries containing product data
+    """
     try:
         response = session.get(url, timeout=10)
         response.raise_for_status()
@@ -192,8 +262,17 @@ def scrape_page(url, session):
         return []
 
 
-def update_csv_file(new_products, file_path):
-    """Update or create a CSV file with new/updated product information."""
+def update_csv_file(new_products: List[Dict[str, Any]], file_path: str) -> List[Dict[str, Any]]:
+    """
+    Update or create a CSV file with new/updated product information.
+
+    Args:
+        new_products: List of new product data to update
+        file_path: Path to the CSV file to update
+
+    Returns:
+        List of merged product data
+    """
     existing_products = {}
 
     # Read existing data if file exists
@@ -256,8 +335,18 @@ def update_csv_file(new_products, file_path):
         return merged_data
 
 
-def get_valid_links(base_url, session, max_links=20):
-    """Find valid product listing pages efficiently."""
+def get_valid_links(base_url: str, session: requests.Session, max_links: int = 20) -> List[str]:
+    """
+    Find valid product listing pages efficiently.
+
+    Args:
+        base_url: Base URL of the website to start from
+        session: Requests session to use for scraping
+        max_links: Maximum number of links to check
+
+    Returns:
+        List of valid product listing page URLs
+    """
     print(f"Visiting C&A homepage: {base_url}")
     valid_links = set()
     visited_links = set()
@@ -283,7 +372,7 @@ def get_valid_links(base_url, session, max_links=20):
         print(f"Found {len(links_to_check)} unique shop links to check")
 
         # Check links concurrently
-        def check_link(url):
+        def check_link(url: str) -> Optional[str]:
             if url in visited_links:
                 return None
 
@@ -329,8 +418,14 @@ def get_valid_links(base_url, session, max_links=20):
         return list(valid_links)
 
 
-def save_products_by_category(all_products, output_dir):
-    """Save products organized by category and type."""
+def save_products_by_category(all_products: List[Dict[str, Any]], output_dir: str) -> None:
+    """
+    Save products organized by category and type.
+
+    Args:
+        all_products: List of all product data
+        output_dir: Directory to save the categorized product files
+    """
     if not all_products:
         print("No products to save by category/type.")
         return
@@ -360,7 +455,10 @@ def save_products_by_category(all_products, output_dir):
     # Removed code that writes CSV files for product types
 
 
-def main():
+def main() -> None:
+    """
+    Main function to run the optimized C&A web scraper.
+    """
     output_dir = "February/CANDA_webscraper/listings"
     create_directory(output_dir)
     print("Starting optimized C&A web scraper...")
@@ -392,7 +490,7 @@ def main():
         all_products = []
         debug_products = []
 
-        def scrape_with_delay(link):
+        def scrape_with_delay(link: str) -> List[Dict[str, Any]]:
             # Add a small random delay to avoid being blocked
             time.sleep(random.uniform(0.5, 2))
             return scrape_page(link, session)

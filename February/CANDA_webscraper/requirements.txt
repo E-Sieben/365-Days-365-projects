@@ -1,0 +1,12 @@
+# Dependencies for C&A Web Scraper
+
+# Core functionality
+requests>=2.28.2
+beautifulsoup4>=4.11.2
+pandas>=1.5.3
+tqdm>=4.64.1
+
+# Additional requirements
+urllib3>=1.26.14
+numpy>=1.24.2  # Required by pandas
+lxml>=4.9.2    # Faster HTML parser for BeautifulSoup
