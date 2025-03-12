@@ -32,17 +32,18 @@ Building the basis, staying within the CLI and avoiding external libraries.
 
 Focusing on Web Scraping, Data Analysis, and Data Visualization.
 
-| Project            | Status                                                                    |
-| ------------------ | ------------------------------------------------------------------------- |
-| Web Scraping       | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
-| Data Analysis      | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
-| Data Visualization | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Project            | Status                                                                 |
+| ------------------ | ---------------------------------------------------------------------- |
+| Web Scraping       | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
+| Data Analysis      | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
+| Data Visualization | ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue) |
 
 ## March: Machine Learning Fundamentals with Scikit-Learn
 
 1-5: Data preprocessing techniques (cleaning, normalization, feature selection)
 
 6-10: Regression models (linear, polynomial, ridge, lasso)
+
 11-15: Classification models (logistic regression, decision trees, random forests)
 
 16-20: Clustering algorithms (K-means, hierarchical, DBSCAN)
@@ -51,13 +52,14 @@ Focusing on Web Scraping, Data Analysis, and Data Visualization.
 
 26-31: Model evaluation techniques (cross-validation, metrics, hyperparameter tuning)
 
-| Project               | Status                                                                    |
-| --------------------- | ------------------------------------------------------------------------- |
-| Data Preprocessing    | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
-| Regression Models     | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
-| Classification Models | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
-| Clustering Models     | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
-| Model Evaluation      | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Project                  | Status                                                                    |
+| ------------------------ | ------------------------------------------------------------------------- |
+| Data Preprocessing       | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Regression Models        | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Classification Models    | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Clustering Models        | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Dimensionality reduction | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
+| Model Evaluation         | ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red) |
 
 ## April: Deep Learning with TensorFlow and Keras
 
