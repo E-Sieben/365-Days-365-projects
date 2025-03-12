@@ -4,72 +4,72 @@ This month, we will focus on three interconnected themes: Web Scraping, Data Ana
 
 ## Table of Contents
 
--  [Web Scraping](#web-scraping)
--  [Data Analysis](#data-analysis)
--  [Data Visualization](#data-visualization)
+- [Web Scraping](#web-scraping)
+- [Data Analysis](#data-analysis)
+- [Data Visualization](#data-visualization)
 
 ## Web Scraping:
 
 1. **[Simple Web Scraper](./0_Web-Scraping/Day01_SimpleWebScraper/)**: Extracts text data from a single web page.
-   -  ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 2. **[Image Scraper](./0_Web-Scraping/Day02_ImageScraper/)**: Downloads images from a web page.
-   -  ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 3. **[Multi-Page Scraper](./0_Web-Scraping/Day03_MultiPageScraper/)**: Scrapes data from multiple pages of a website.
-   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 4. **[API Data Fetcher](./0_Web-Scraping/Day04_APIDataFetcher/)**: Fetches data from a public API.
-   -  ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 5. **[Web Scraper with Authentication](./0_Web-Scraping/Day05_AuthenticatedScraper/)**: Scrapes data from a website that requires login.
-   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 6. **[Scraper with Proxy](./0_Web-Scraping/Day06_ProxyScraper/)**: Uses a proxy to scrape data from a website.
-   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 7. **[Scraper with Error Handling](./0_Web-Scraping/Day07_ErrorHandlingScraper/)**: Implements error handling in a web scraper.
-   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 8. **[Scraper for Dynamic Content](./0_Web-Scraping/Day08_DynamicContentScraper/)**: Scrapes data from a website with dynamic content (e.g., JavaScript-rendered).
-   -  ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 9. **[Scraper with Scheduling](./0_Web-Scraping/Day09_ScheduledScraper/)**: Schedules a web scraper to run at regular intervals.
-   -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-   -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
-10.   **[Scraper for Specific Data](./0_Web-Scraping/Day10_SpecificDataScraper/)**: Scrapes specific data (e.g., product prices) from a website.
-      -  ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-      -  ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+   - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+   - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
+10. **[Scraper for Specific Data](./0_Web-Scraping/Day10_SpecificDataScraper/)**: Scrapes specific data (e.g., product prices) from a website.
+    - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 
 ## Data Analysis:
 
 11. **[Data Cleaning](./1_Data-Analysis/Day11_DataCleaning/)**: Cleans and preprocesses scraped data.
     - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 12. **[Basic Statistics](./1_Data-Analysis/Day12_BasicStatistics/)**: Calculates basic statistics (mean, median, mode) on the data.
     - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 13. **[Data Aggregation](./1_Data-Analysis/Day13_DataAggregation/)**: Aggregates data by categories.
     - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 14. **[Data Filtering](./1_Data-Analysis/Day14_DataFiltering/)**: Filters data based on specific criteria.
     - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 15. **[Data Transformation](./1_Data-Analysis/Day15_DataTransformation/)**: Transforms data into a different format.
     - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 16. **[Time Series Analysis](./1_Data-Analysis/Day16_TimeSeriesAnalysis/)**: Analyzes time series data.
     - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 17. **[Correlation Analysis](./1_Data-Analysis/Day17_CorrelationAnalysis/)**: Finds correlations between different data variables.
     - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 18. **[Data Clustering](./1_Data-Analysis/Day18_DataClustering/)**: Groups data into clusters.
     - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 19. **[Data Classification](./1_Data-Analysis/Day19_DataClassification/)**: Classifies data into predefined categories.
     - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 
 ## Data Visualization:
 
