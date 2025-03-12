@@ -75,28 +75,28 @@ This month, we will focus on three interconnected themes: Web Scraping, Data Ana
 
 20. **[Basic Plotting](./2_Data-Visualization/Day20_BasicPlotting/)**: Creates basic plots (e.g., line, bar, scatter).
     - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 21. **[Histogram](./2_Data-Visualization/Day21_Histogram/)**: Plots a histogram of the data.
     - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 22. **[Pie Chart](./2_Data-Visualization/Day22_PieChart/)**: Creates a pie chart to show data distribution.
     - ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 23. **[Box Plot](./2_Data-Visualization/Day23_BoxPlot/)**: Plots a box plot to show data spread.
     - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 24. **[Heatmap](./2_Data-Visualization/Day24_Heatmap/)**: Creates a heatmap to show data density.
     - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 25. **[Time Series Plot](./2_Data-Visualization/Day25_TimeSeriesPlot/)**: Plots time series data.
     - ![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-yellow)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 26. **[Geographical Plot](./2_Data-Visualization/Day26_GeographicalPlot/)**: Plots data on a map.
     - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 27. **[Interactive Plot](./2_Data-Visualization/Day27_InteractivePlot/)**: Creates an interactive plot.
     - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
 28. **[Dashboard](./2_Data-Visualization/Day28_Dashboard/)**: Builds a dashboard to display multiple visualizations.
     - ![Difficulty: Hard](https://img.shields.io/badge/Difficulty-Hard-red)
-    - ![Status: Incomplete](https://img.shields.io/badge/Status-Incomplete-red)
+    - ![Status: Complete](https://img.shields.io/badge/Status-Complete-blue)
