@@ -1,65 +1,107 @@
-from sklearn import preprocessing as pp
 import numpy as np
 import pandas as pd
-from getData import getProducts
-from sys import path
-path.append('../..')
+from sklearn import preprocessing as pp
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+
+def getTrainingData(test_size=0.2, random_state=42, scale_features=True, max_text_features=100):
+    """
+    Prepare training and testing data for regression tasks.
+
+    Parameters:
+    -----------
+    test_size : float, default=0.2
+        The proportion of the dataset to include in the test split.
+    random_state : int, default=42
+        Controls the shuffling applied to the data before applying the split.
+    scale_features : bool, default=True
+        Whether to scale numerical features.
+    max_text_features : int, default=100
+        Maximum number of text features to extract.
+
+    Returns:
+    --------
+    dict : A dictionary containing X_train, X_test, y_train, y_test, and other metadata
+    """
+    # Load data from CSV
+    csv_path = '/workspaces/365-Days-365-projects/February/CANDA_webscraper/listings/all_products.csv'
+    df = pd.read_csv(csv_path)
+
+    # Clean and convert price column
+    df['price_numeric'] = df['price'].apply(lambda x:
+                                            float(str(x).replace(
+                                                ',', '.').replace('"', ''))
+                                            if x != 'Price not found' else np.nan)
+
+    # Drop rows with missing prices for regression task
+    df_clean = df.dropna(subset=['price_numeric']).copy()
+
+    # Feature engineering
+    # Encode categorical variables
+    cat_columns = ['category', 'type']
+    encoder = pp.OneHotEncoder(handle_unknown="ignore", sparse_output=False)
+    encoded_cats = encoder.fit_transform(df_clean[cat_columns])
+    encoded_cats_df = pd.DataFrame(
+        encoded_cats,
+        columns=encoder.get_feature_names_out(),
+        index=df_clean.index
+    )
+
+    # Process product titles with TF-IDF
+    vectorizer = TfidfVectorizer(max_features=max_text_features)
+    tfidf_matrix = vectorizer.fit_transform(df_clean['title'])
+    tfidf_df = pd.DataFrame(
+        tfidf_matrix.toarray(),
+        columns=vectorizer.get_feature_names_out(),
+        index=df_clean.index
+    )
+
+    # Extract date features
+    df_clean['scrape_date'] = pd.to_datetime(df_clean['scrape_date'])
+    df_clean['day_of_week'] = df_clean['scrape_date'].dt.dayofweek
+    df_clean['month'] = df_clean['scrape_date'].dt.month
+
+    # Combine features
+    features_df = pd.concat([
+        encoded_cats_df,
+        tfidf_df,
+        df_clean[['day_of_week', 'month']]
+    ], axis=1)
+
+    # Scale features if requested
+    if scale_features:
+        numeric_columns = features_df.select_dtypes(
+            include=[np.number]).columns
+        scaler = pp.StandardScaler()
+        features_df[numeric_columns] = scaler.fit_transform(
+            features_df[numeric_columns])
+
+    # Define target
+    target = df_clean['price_numeric']
+
+    # Split data
+    X_train, X_test, y_train, y_test = train_test_split(
+        features_df, target, test_size=test_size, random_state=random_state
+    )
+
+    # Return data as dict for easy access
+    return {
+        'X_train': X_train,
+        'X_test': X_test,
+        'y_train': y_train,
+        'y_test': y_test,
+        'feature_names': list(features_df.columns),
+        'encoder': encoder,
+        'vectorizer': vectorizer,
+        'scaler': scaler if scale_features else None,
+        'original_data': df_clean
+    }
 
 
 def getData():
-    products = getProducts()
-    justProducts = []
-    categories = list(products.keys())
-    category_to_id = {category: idx for idx, category in enumerate(categories)}
-
-    for category in products:
-        category_id = category_to_id[category]
-        for name, price in products[category]:
-            justProducts.append((category, category_id, name, price))
-
-    normalizedProducts = []
-    for i in range(len(justProducts)):
-        normalizedProducts.append({
-            "product_id": i,
-            "category_name": justProducts[i][0],
-            "category_id": justProducts[i][1],
-            "product_name": justProducts[i][2],
-            "product_price": justProducts[i][3]
-        })
-    products = normalizedProducts
-    # Reformat the products
-    reformattedProducts = {
-        "category_name": [],
-        "product_name": [],
-        "product_price": []
-    }
-    for product in products:
-        reformattedProducts["category_name"].append(product["category_name"])
-        reformattedProducts["product_name"].append(product["product_name"])
-        reformattedProducts["product_price"].append(product["product_price"])
-
-    # Create Data frame
-    df = pd.DataFrame(data=reformattedProducts)
-    # Create and configure encoder
-    ohe = pp.OneHotEncoder(handle_unknown="ignore",
-                           sparse_output=False).set_output(transform="pandas")
-    # Use encoder by fiting and transforming the data
-    oheTransformed = ohe.fit_transform(df[["category_name"]])
-    # Put both Data Frames together and delete the original category_name column
-    df = pd.concat([df, oheTransformed], axis=1).drop(
-        columns=["category_name"])
-    from sklearn.feature_extraction.text import TfidfVectorizer
-
-    vectorizer = TfidfVectorizer(max_features=100)
-    tfidf_matrix = vectorizer.fit_transform(df["product_name"])
-    product_names_encoded = vectorizer.fit_transform(df["product_name"])
-    product_names_df = pd.DataFrame(
-        product_names_encoded.toarray(),
-        columns=vectorizer.get_feature_names_out()
-    )
-    df = pd.concat([df, product_names_df], axis=1).drop(
-        columns=["product_name"])
-    train_size = int(len(df) * 0.8)
-    training = df.iloc[:train_size].reset_index(drop=True)
-    testing = df.iloc[train_size:].reset_index(drop=True)
-    return (training, testing)
+    """Legacy function for backward compatibility"""
+    result = getTrainingData(test_size=0.2)
+    training_data = pd.concat([result['X_train'], result['y_train']], axis=1)
+    testing_data = pd.concat([result['X_test'], result['y_test']], axis=1)
+    return (training_data, testing_data)
